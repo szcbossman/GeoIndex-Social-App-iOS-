@@ -7,6 +7,7 @@
 //
 
 #import "SCTabBarController.h"
+#import "SCHomeViewController.h"
 
 @interface SCTabBarController ()
 

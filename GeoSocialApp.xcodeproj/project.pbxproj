@@ -12,6 +12,11 @@
 		E14FAA60200AD34C00C5F931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E14FAA5F200AD34C00C5F931 /* Assets.xcassets */; };
 		E14FAA63200AD34C00C5F931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14FAA61200AD34C00C5F931 /* LaunchScreen.storyboard */; };
 		E14FAA6D200AD48A00C5F931 /* SCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14FAA6C200AD48A00C5F931 /* SCTabBarController.m */; };
+		E1CAFF47200C209B00F230E9 /* SCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CAFF45200C209B00F230E9 /* SCHomeViewController.m */; };
+		E1CAFF48200C209B00F230E9 /* SCHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1CAFF46200C209B00F230E9 /* SCHomeViewController.xib */; };
+		E1CAFF4C200C251F00F230E9 /* SCPost.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CAFF4B200C251F00F230E9 /* SCPost.m */; };
+		E1CAFF51200C258E00F230E9 /* SCHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CAFF4F200C258E00F230E9 /* SCHomeTableViewCell.m */; };
+		E1CAFF52200C258E00F230E9 /* SCHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1CAFF50200C258E00F230E9 /* SCHomeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,14 @@
 		E14FAA64200AD34C00C5F931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E14FAA6B200AD48A00C5F931 /* SCTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTabBarController.h; sourceTree = "<group>"; };
 		E14FAA6C200AD48A00C5F931 /* SCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTabBarController.m; sourceTree = "<group>"; };
+		E1CAFF44200C209B00F230E9 /* SCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCHomeViewController.h; sourceTree = "<group>"; };
+		E1CAFF45200C209B00F230E9 /* SCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCHomeViewController.m; sourceTree = "<group>"; };
+		E1CAFF46200C209B00F230E9 /* SCHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCHomeViewController.xib; sourceTree = "<group>"; };
+		E1CAFF4A200C251F00F230E9 /* SCPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPost.h; sourceTree = "<group>"; };
+		E1CAFF4B200C251F00F230E9 /* SCPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPost.m; sourceTree = "<group>"; };
+		E1CAFF4E200C258E00F230E9 /* SCHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCHomeTableViewCell.h; sourceTree = "<group>"; };
+		E1CAFF4F200C258E00F230E9 /* SCHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCHomeTableViewCell.m; sourceTree = "<group>"; };
+		E1CAFF50200C258E00F230E9 /* SCHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCHomeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +69,8 @@
 		E14FAA52200AD34C00C5F931 /* GeoSocialApp */ = {
 			isa = PBXGroup;
 			children = (
+				E1CAFF4D200C256800F230E9 /* View */,
+				E1CAFF49200C24F100F230E9 /* Model */,
 				E14FAA56200AD34C00C5F931 /* AppDelegate.h */,
 				E14FAA57200AD34C00C5F931 /* AppDelegate.m */,
 				E14FAA6A200AD3C300C5F931 /* ViewController */,
@@ -80,8 +95,30 @@
 			children = (
 				E14FAA6B200AD48A00C5F931 /* SCTabBarController.h */,
 				E14FAA6C200AD48A00C5F931 /* SCTabBarController.m */,
+				E1CAFF44200C209B00F230E9 /* SCHomeViewController.h */,
+				E1CAFF45200C209B00F230E9 /* SCHomeViewController.m */,
+				E1CAFF46200C209B00F230E9 /* SCHomeViewController.xib */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E1CAFF49200C24F100F230E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1CAFF4A200C251F00F230E9 /* SCPost.h */,
+				E1CAFF4B200C251F00F230E9 /* SCPost.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E1CAFF4D200C256800F230E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E1CAFF4E200C258E00F230E9 /* SCHomeTableViewCell.h */,
+				E1CAFF4F200C258E00F230E9 /* SCHomeTableViewCell.m */,
+				E1CAFF50200C258E00F230E9 /* SCHomeTableViewCell.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +180,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1CAFF48200C209B00F230E9 /* SCHomeViewController.xib in Resources */,
 				E14FAA63200AD34C00C5F931 /* LaunchScreen.storyboard in Resources */,
+				E1CAFF52200C258E00F230E9 /* SCHomeTableViewCell.xib in Resources */,
 				E14FAA60200AD34C00C5F931 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +197,9 @@
 				E14FAA58200AD34C00C5F931 /* AppDelegate.m in Sources */,
 				E14FAA6D200AD48A00C5F931 /* SCTabBarController.m in Sources */,
 				E14FAA55200AD34C00C5F931 /* main.m in Sources */,
+				E1CAFF47200C209B00F230E9 /* SCHomeViewController.m in Sources */,
+				E1CAFF51200C258E00F230E9 /* SCHomeTableViewCell.m in Sources */,
+				E1CAFF4C200C251F00F230E9 /* SCPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +350,7 @@
 				E14FAA69200AD34C00C5F931 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
