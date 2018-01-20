@@ -18,6 +18,7 @@
 		E1CAFF4C200C251F00F230E9 /* SCPost.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CAFF4B200C251F00F230E9 /* SCPost.m */; };
 		E1CAFF51200C258E00F230E9 /* SCHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CAFF4F200C258E00F230E9 /* SCHomeTableViewCell.m */; };
 		E1CAFF52200C258E00F230E9 /* SCHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1CAFF50200C258E00F230E9 /* SCHomeTableViewCell.xib */; };
+		E1E818E02014053200D9B15E /* SCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E818DF2014053200D9B15E /* SCUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		E1CAFF4E200C258E00F230E9 /* SCHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCHomeTableViewCell.h; sourceTree = "<group>"; };
 		E1CAFF4F200C258E00F230E9 /* SCHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCHomeTableViewCell.m; sourceTree = "<group>"; };
 		E1CAFF50200C258E00F230E9 /* SCHomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCHomeTableViewCell.xib; sourceTree = "<group>"; };
+		E1E818DE2014053200D9B15E /* SCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCUser.h; sourceTree = "<group>"; };
+		E1E818DF2014053200D9B15E /* SCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 			children = (
 				E1CAFF4A200C251F00F230E9 /* SCPost.h */,
 				E1CAFF4B200C251F00F230E9 /* SCPost.m */,
+				E1E818DE2014053200D9B15E /* SCUser.h */,
+				E1E818DF2014053200D9B15E /* SCUser.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				E14FAA6D200AD48A00C5F931 /* SCTabBarController.m in Sources */,
 				E14FAA55200AD34C00C5F931 /* main.m in Sources */,
 				E1CAFF47200C209B00F230E9 /* SCHomeViewController.m in Sources */,
+				E1E818E02014053200D9B15E /* SCUser.m in Sources */,
 				E1CAFF51200C258E00F230E9 /* SCHomeTableViewCell.m in Sources */,
 				E1CAFF4C200C251F00F230E9 /* SCPost.m in Sources */,
 			);

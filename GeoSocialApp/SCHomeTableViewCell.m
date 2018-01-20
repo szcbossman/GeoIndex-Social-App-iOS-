@@ -8,6 +8,7 @@
 
 #import "SCHomeTableViewCell.h"
 #import "SCPost.h"
+#import "UIImageView+AFNetWorking.h"
 
 @interface SCHomeTableViewCell ()
 
