@@ -1,12 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SCSignInViewController">
             <connections>
+                <outlet property="nameField" destination="kmA-bQ-uJ6" id="Jmk-Az-DfL"/>
+                <outlet property="passwordField" destination="Mkp-GZ-yQ9" id="RyJ-Yt-7do"/>
+                <outlet property="signInButton" destination="QZ0-vl-mjI" id="jt2-hu-S4a"/>
+                <outlet property="signupButton" destination="xwK-h7-UxC" id="p23-Os-yMW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +22,55 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mkp-GZ-yQ9">
+                    <rect key="frame" x="62.5" y="110" width="250" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="MdY-T8-Nai"/>
+                        <constraint firstAttribute="height" constant="40" id="lRa-Bf-9lb"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZ0-vl-mjI">
+                    <rect key="frame" x="62" y="175" width="250" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="GaY-sd-FLS"/>
+                        <constraint firstAttribute="height" constant="40" id="gbP-Ra-YzR"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwK-h7-UxC">
+                    <rect key="frame" x="62" y="230" width="250" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="7Sb-cw-iH5"/>
+                        <constraint firstAttribute="height" constant="40" id="U8M-Gf-usC"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kmA-bQ-uJ6">
+                    <rect key="frame" x="62" y="50" width="250" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="nj9-eD-cdq"/>
+                        <constraint firstAttribute="width" constant="250" id="ty4-8S-WnZ"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xwK-h7-UxC" firstAttribute="top" secondItem="QZ0-vl-mjI" secondAttribute="bottom" constant="15" id="19J-5x-QfE"/>
+                <constraint firstItem="kmA-bQ-uJ6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="1XI-5a-Z0c"/>
+                <constraint firstItem="Mkp-GZ-yQ9" firstAttribute="top" secondItem="kmA-bQ-uJ6" secondAttribute="bottom" constant="20" id="7Zs-WN-zM0"/>
+                <constraint firstItem="QZ0-vl-mjI" firstAttribute="top" secondItem="Mkp-GZ-yQ9" secondAttribute="bottom" constant="25" id="GmF-0f-ZTN"/>
+                <constraint firstItem="Mkp-GZ-yQ9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VZ0-bO-90v"/>
+                <constraint firstItem="QZ0-vl-mjI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="an4-pe-2Ki"/>
+                <constraint firstItem="kmA-bQ-uJ6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="b0C-q9-NEK"/>
+                <constraint firstItem="xwK-h7-UxC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pbS-ux-tBo"/>
+            </constraints>
         </view>
     </objects>
 </document>

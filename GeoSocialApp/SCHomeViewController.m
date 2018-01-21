@@ -9,6 +9,8 @@
 #import "SCHomeViewController.h"
 #import "SCPost.h"
 #import "SCHomeTableViewCell.h"
+#import "SCUserManager.h"
+#import "SCSignInViewController.h"
 
 static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
 
@@ -27,6 +29,13 @@ static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
     // Do any additional setup after loading the view from its nib.
     [self setupTableView];
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    // check user login or not
+    [self userLoginIfRequire];
+}
+
 
 - (void)setupTableView {
     self.tableView.delegate = self;
@@ -55,7 +64,16 @@ static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
     return [SCHomeTableViewCell cellHeight];
 }
 
-
+#pragma mark - private
+- (void)userLoginIfRequire {
+    if(![[SCUserManager sharedUserManager] isUserLogin]) {
+        SCSignInViewController *signInViewController = [[SCSignInViewController alloc] initWithNibName:NSStringFromClass([SCSignInViewController class]) bundle:nil];
+        [self presentViewController:signInViewController animated:YES completion:nil];
+    }
+    else {
+        //[self loadPosts];
+    }
+}
 
 
 
