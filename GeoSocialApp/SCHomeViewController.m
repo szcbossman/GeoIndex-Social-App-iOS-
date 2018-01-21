@@ -14,7 +14,7 @@
 
 static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
 
-@interface SCHomeViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface SCHomeViewController () <UITableViewDataSource, UITableViewDelegate, SCSignInViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray<SCPost *> *posts;
@@ -63,6 +63,13 @@ static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [SCHomeTableViewCell cellHeight];
 }
+
+
+#pragma mark - SCSignInViewControllerDelegate
+- (void)loginSuccess {
+    //[self loadPosts];
+}
+
 
 #pragma mark - private
 - (void)userLoginIfRequire {

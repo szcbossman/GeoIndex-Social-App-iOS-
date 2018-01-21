@@ -48,30 +48,8 @@
 
 
 // sign up and login
-- (void)userLogin
-{
-    __weak typeof(self) weakSelf = self;
-    [[SCUserManager sharedUserManager] loginWithUsername:self.nameField.text password:self.passwordField.text andCompletionBlock:^(NSError * _Nullable error) {
-        if (error) {
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"Please sign up" preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-                NSLog(@"OK");
-            }];
-            [alert addAction:okAction];
-            [self presentViewController:alert animated:YES completion:nil];
-        }
-        else {
-            if ([self.delegate respondsToSelector:@selector(loginSuccess)]) {
-                [self.delegate loginSuccess];
-            }
-            [weakSelf dismissViewControllerAnimated:YES completion:nil];
-        }
-    }];
-}
 
-
-- (void)userSignup
-{
+- (void)userSignup {
     __weak typeof(self) weakSelf = self;
     [[SCUserManager sharedUserManager] signupWithUsername:self.nameField.text password:self.passwordField.text andCompletionBlock:^(NSError * _Nullable error) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -92,6 +70,30 @@
         });
     }];
 }
+
+
+- (void)userLogin {
+    __weak typeof(self) weakSelf = self;
+    [[SCUserManager sharedUserManager] loginWithUsername:self.nameField.text password:self.passwordField.text andCompletionBlock:^(NSError * _Nullable error) {
+        if (error) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"Please sign up" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+                NSLog(@"OK");
+            }];
+            [alert addAction:okAction];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+        else {
+            if ([self.delegate respondsToSelector:@selector(loginSuccess)]) {
+                [self.delegate loginSuccess];
+            }
+            [weakSelf dismissViewControllerAnimated:YES completion:nil];
+        }
+    }];
+}
+
+
+
 
 
 

@@ -31,12 +31,13 @@
 }
 
 - (UIViewController *)homeViewController {
-    UIViewController *homeController = [[UIViewController alloc] init];
-    homeController.view.backgroundColor = [UIColor whiteColor];
-    homeController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Home" image:[UIImage imageNamed:@"Events"] selectedImage:[UIImage imageNamed:@"Events_selected"]];
-    homeController.tabBarItem.tag = 0;
+    SCHomeViewController *homeController = [[SCHomeViewController alloc] init];
+    UIImage *image = [UIImage imageNamed:@"Events"];
+    UIImage *selectedImage = [UIImage imageNamed:@"Events_selected"];
+    homeController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Home" image:image selectedImage:selectedImage];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:homeController];
     return navigationController;
+
 }
 
 - (UIViewController *)exploreViewController {
