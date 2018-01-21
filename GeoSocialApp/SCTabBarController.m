@@ -35,6 +35,7 @@
     UIImage *image = [UIImage imageNamed:@"Events"];
     UIImage *selectedImage = [UIImage imageNamed:@"Events_selected"];
     homeController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Home" image:image selectedImage:selectedImage];
+    //homeController.tabBarItem.tag = 0;
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:homeController];
     return navigationController;
 
