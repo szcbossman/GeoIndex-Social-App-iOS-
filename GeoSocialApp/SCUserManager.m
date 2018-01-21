@@ -106,10 +106,11 @@ static NSString * const SCBaseURLString = @"https://around-75015.appspot.com";
     sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plain", @"application/json", nil];
     // API call with completion block
+    __weak typeof(self) weakSelf = self;
     [[sessionManager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         if (!error) {
             NSLog(@"Sign up API response: %@",[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
-            [self loginWithUsername:username password:password andCompletionBlock:^(NSError * _Nullable error) {
+            [weakSelf loginWithUsername:username password:password andCompletionBlock:^(NSError * _Nullable error) {
                 if (completionBlock) {
                     completionBlock(error);
                 }
