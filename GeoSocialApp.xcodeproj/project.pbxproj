@@ -23,6 +23,8 @@
 		E1E818E820140B5C00D9B15E /* SCSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E818E620140B5C00D9B15E /* SCSignInViewController.m */; };
 		E1E818E920140B5C00D9B15E /* SCSignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E818E720140B5C00D9B15E /* SCSignInViewController.xib */; };
 		E1E818EC20154B8700D9B15E /* SCPostManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E818EB20154B8700D9B15E /* SCPostManager.m */; };
+		E1E818F0201555AA00D9B15E /* SCCreatePostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E818EE201555AA00D9B15E /* SCCreatePostViewController.m */; };
+		E1E818F1201555AA00D9B15E /* SCCreatePostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E818EF201555AA00D9B15E /* SCCreatePostViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,9 @@
 		E1E818E720140B5C00D9B15E /* SCSignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCSignInViewController.xib; sourceTree = "<group>"; };
 		E1E818EA20154B8700D9B15E /* SCPostManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPostManager.h; sourceTree = "<group>"; };
 		E1E818EB20154B8700D9B15E /* SCPostManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPostManager.m; sourceTree = "<group>"; };
+		E1E818ED201555AA00D9B15E /* SCCreatePostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCreatePostViewController.h; sourceTree = "<group>"; };
+		E1E818EE201555AA00D9B15E /* SCCreatePostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCreatePostViewController.m; sourceTree = "<group>"; };
+		E1E818EF201555AA00D9B15E /* SCCreatePostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCCreatePostViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +136,9 @@
 				E1E818E520140B5C00D9B15E /* SCSignInViewController.h */,
 				E1E818E620140B5C00D9B15E /* SCSignInViewController.m */,
 				E1E818E720140B5C00D9B15E /* SCSignInViewController.xib */,
+				E1E818ED201555AA00D9B15E /* SCCreatePostViewController.h */,
+				E1E818EE201555AA00D9B15E /* SCCreatePostViewController.m */,
+				E1E818EF201555AA00D9B15E /* SCCreatePostViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -242,6 +250,7 @@
 				E14FAA63200AD34C00C5F931 /* LaunchScreen.storyboard in Resources */,
 				E1CAFF52200C258E00F230E9 /* SCHomeTableViewCell.xib in Resources */,
 				E14FAA60200AD34C00C5F931 /* Assets.xcassets in Resources */,
+				E1E818F1201555AA00D9B15E /* SCCreatePostViewController.xib in Resources */,
 				E1E818E920140B5C00D9B15E /* SCSignInViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +316,7 @@
 				E14FAA58200AD34C00C5F931 /* AppDelegate.m in Sources */,
 				E1E818E820140B5C00D9B15E /* SCSignInViewController.m in Sources */,
 				E14FAA6D200AD48A00C5F931 /* SCTabBarController.m in Sources */,
+				E1E818F0201555AA00D9B15E /* SCCreatePostViewController.m in Sources */,
 				E1E818E4201406C200D9B15E /* SCUserManager.m in Sources */,
 				E14FAA55200AD34C00C5F931 /* main.m in Sources */,
 				E1E818EC20154B8700D9B15E /* SCPostManager.m in Sources */,
