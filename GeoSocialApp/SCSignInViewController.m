@@ -72,7 +72,8 @@
 }
 
 
-- (void)userLogin {
+- (void)userLogin
+{
     __weak typeof(self) weakSelf = self;
     [[SCUserManager sharedUserManager] loginWithUsername:self.nameField.text password:self.passwordField.text andCompletionBlock:^(NSError * _Nullable error) {
         if (error) {
