@@ -11,6 +11,8 @@
 #import "SCHomeTableViewCell.h"
 #import "SCUserManager.h"
 #import "SCSignInViewController.h"
+#import "SCCreatePostViewController.h"
+#import "SCPostManager.h"
 
 static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
 
@@ -18,6 +20,7 @@ static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray<SCPost *> *posts;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 @end
 
@@ -67,7 +70,27 @@ static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
 
 #pragma mark - SCSignInViewControllerDelegate
 - (void)loginSuccess {
-    //[self loadPosts];
+    [self loadPosts];
+}
+
+
+#pragma mark - API
+- (void)loadPosts
+{
+    __weak typeof(self) weakSelf = self;
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:37.441883 longitude:-122.143019];
+    NSInteger range = 300000;
+    [SCPostManager getPostsWithLocation:location range:range andCompletion:^(NSArray<SCPost *> *posts, NSError *error) {
+        if (posts) {
+            weakSelf.posts = posts;
+            [weakSelf.tableView reloadData];
+            NSLog(@"get posts count:%ld", (long)posts.count);
+        }
+        else {
+            NSLog(@"error: %@", error);
+        }
+    }];
+    [self.refreshControl endRefreshing];
 }
 
 
@@ -78,7 +101,7 @@ static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
         [self presentViewController:signInViewController animated:YES completion:nil];
     }
     else {
-        //[self loadPosts];
+        [self loadPosts];
     }
 }
 

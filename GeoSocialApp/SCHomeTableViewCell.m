@@ -38,7 +38,7 @@
     self.post = post;
     self.titleLabel.text = post.name;
     self.messageLabel.text = post.message;
-    //[self.postImage setImageWithURL:[NSURL URLWithString:self.post.imageURL] placeholderImage:[UIImage imageNamed:@"loading"]];
+    [self.postImage setImageWithURL:[NSURL URLWithString:self.post.imageURL] placeholderImage:[UIImage imageNamed:@"loading"]];
 }
 
 + (CGFloat)cellHeight {
