@@ -16,7 +16,7 @@
 
 static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
 
-@interface SCHomeViewController () <UITableViewDataSource, UITableViewDelegate, SCSignInViewControllerDelegate>
+@interface SCHomeViewController () <UITableViewDataSource, UITableViewDelegate, SCSignInViewControllerDelegate, SCCreatePostViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray<SCPost *> *posts;
@@ -29,8 +29,10 @@ static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    [self setupTableView];
+    // load data
+    [self loadPosts];
+    // load UI
+    [self setupUI];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -39,12 +41,6 @@ static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
     [self userLoginIfRequire];
 }
 
-
-- (void)setupTableView {
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SCHomeTableViewCell class]) bundle:nil] forCellReuseIdentifier:SCHomeCellIdentifier];
-}
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -74,6 +70,11 @@ static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
 }
 
 
+#pragma mark - SCCreatePostViewControllerDelegate
+- (void)didCreatePost {
+    [self loadPosts];
+}
+
 #pragma mark - API
 - (void)loadPosts
 {
@@ -93,6 +94,52 @@ static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
     [self.refreshControl endRefreshing];
 }
 
+
+#pragma mark - UI
+- (void)setupUI
+{
+    [self setupTableView];
+    [self setupNavigationBarUI];
+    [self setupRefreshControlUI];
+}
+
+- (void)setupTableView
+{
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SCHomeTableViewCell class]) bundle:nil] forCellReuseIdentifier:SCHomeCellIdentifier];
+}
+
+- (void)setupNavigationBarUI
+{
+    self.title = NSLocalizedString(@"Home", nil);
+    self.navigationController.navigationBar.tintColor = [UIColor darkTextColor];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"PostEvents"] style:UIBarButtonItemStyleDone target:self action:@selector(showCreatePostPage)];
+}
+
+- (void)setupRefreshControlUI
+{
+    self.refreshControl = [UIRefreshControl new];
+    self.refreshControl.tintColor = [UIColor blackColor];
+    [self.refreshControl addTarget:self action:@selector(loadPosts) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
+}
+
+
+#pragma mark - action
+- (void)showCreatePostPage {
+    SCCreatePostViewController *createPostViewController = [[SCCreatePostViewController alloc] initWithNibName:NSStringFromClass([SCCreatePostViewController class]) bundle:nil];
+    createPostViewController.delegate = self;
+    [self.navigationController pushViewController:createPostViewController animated:YES];
+}
+
+
+#pragma mark -- public
+- (void)loadResultPageWithPosts:(NSArray <SCPost *>*)posts
+{
+    self.posts = posts;
+    [self.tableView reloadData];
+}
 
 #pragma mark - private
 - (void)userLoginIfRequire {

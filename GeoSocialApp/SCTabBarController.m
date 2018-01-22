@@ -45,7 +45,7 @@
     UIViewController *exploreController = [[UIViewController alloc] init];
     exploreController.view.backgroundColor = [UIColor blueColor];
     exploreController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Explore" image:[UIImage imageNamed:@"Explore"] selectedImage:[UIImage imageNamed:@"Explore_selected"]];
-    exploreController.tabBarItem.tag = 1;
+    //exploreController.tabBarItem.tag = 1;
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:exploreController];
     return navigationController;
 }
