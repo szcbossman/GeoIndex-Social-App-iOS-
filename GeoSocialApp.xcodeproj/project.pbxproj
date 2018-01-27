@@ -25,6 +25,7 @@
 		E1E818EC20154B8700D9B15E /* SCPostManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E818EB20154B8700D9B15E /* SCPostManager.m */; };
 		E1E818F0201555AA00D9B15E /* SCCreatePostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E818EE201555AA00D9B15E /* SCCreatePostViewController.m */; };
 		E1E818F1201555AA00D9B15E /* SCCreatePostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E818EF201555AA00D9B15E /* SCCreatePostViewController.xib */; };
+		E1FB9814201D308E00BDBEA4 /* SCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB9813201D308E00BDBEA4 /* SCLocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,8 @@
 		E1E818ED201555AA00D9B15E /* SCCreatePostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCreatePostViewController.h; sourceTree = "<group>"; };
 		E1E818EE201555AA00D9B15E /* SCCreatePostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCreatePostViewController.m; sourceTree = "<group>"; };
 		E1E818EF201555AA00D9B15E /* SCCreatePostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCCreatePostViewController.xib; sourceTree = "<group>"; };
+		E1FB9812201D308E00BDBEA4 /* SCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLocationManager.h; sourceTree = "<group>"; };
+		E1FB9813201D308E00BDBEA4 /* SCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLocationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,8 @@
 				E1E818E3201406C200D9B15E /* SCUserManager.m */,
 				E1E818EA20154B8700D9B15E /* SCPostManager.h */,
 				E1E818EB20154B8700D9B15E /* SCPostManager.m */,
+				E1FB9812201D308E00BDBEA4 /* SCLocationManager.h */,
+				E1FB9813201D308E00BDBEA4 /* SCLocationManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 				E1E818E820140B5C00D9B15E /* SCSignInViewController.m in Sources */,
 				E14FAA6D200AD48A00C5F931 /* SCTabBarController.m in Sources */,
 				E1E818F0201555AA00D9B15E /* SCCreatePostViewController.m in Sources */,
+				E1FB9814201D308E00BDBEA4 /* SCLocationManager.m in Sources */,
 				E1E818E4201406C200D9B15E /* SCUserManager.m in Sources */,
 				E14FAA55200AD34C00C5F931 /* main.m in Sources */,
 				E1E818EC20154B8700D9B15E /* SCPostManager.m in Sources */,
