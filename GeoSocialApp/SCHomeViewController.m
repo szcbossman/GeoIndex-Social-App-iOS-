@@ -142,15 +142,15 @@ static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
 }
 
 #pragma mark - private
-- (void)userLoginIfRequire {
-    if(![[SCUserManager sharedUserManager] isUserLogin]) {
+- (void)userLoginIfRequire
+{
+    if (![[SCUserManager sharedUserManager] isUserLogin]) {
         SCSignInViewController *signInViewController = [[SCSignInViewController alloc] initWithNibName:NSStringFromClass([SCSignInViewController class]) bundle:nil];
+        signInViewController.delegate = self;
         [self presentViewController:signInViewController animated:YES completion:nil];
     }
-    else {
-        [self loadPosts];
-    }
 }
+
 
 
 
