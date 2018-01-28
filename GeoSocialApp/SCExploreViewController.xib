@@ -42,6 +42,7 @@
                 <constraint firstAttribute="bottom" secondItem="LLT-pD-Jba" secondAttribute="bottom" id="cJv-36-fw6"/>
                 <constraint firstItem="LLT-pD-Jba" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="m0i-lt-pXK"/>
             </constraints>
+            <point key="canvasLocation" x="31" y="57"/>
         </view>
     </objects>
 </document>

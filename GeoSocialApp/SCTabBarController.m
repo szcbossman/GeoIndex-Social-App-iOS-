@@ -8,6 +8,7 @@
 
 #import "SCTabBarController.h"
 #import "SCHomeViewController.h"
+#import "SCExploreViewController.h"
 
 @interface SCTabBarController ()
 
@@ -42,7 +43,7 @@
 }
 
 - (UIViewController *)exploreViewController {
-    UIViewController *exploreController = [[UIViewController alloc] init];
+    SCExploreViewController *exploreController = [[SCExploreViewController alloc] init];
     UIImage *image = [UIImage imageNamed:@"Explore"];
     UIImage *selectedImage = [UIImage imageNamed:@"Explore_selected"];
     exploreController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Explore" image:image selectedImage:selectedImage];
