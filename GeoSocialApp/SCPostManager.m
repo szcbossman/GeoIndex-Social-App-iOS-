@@ -11,7 +11,9 @@
 #import "AFNetworking.h"
 #import "SCUserManager.h"
 #import "SCUser.h"
+#import "SCLocationManager.h"
 #import <CoreLocation/CoreLocation.h>
+
 
 static NSString * const SCBaseURLString = @"https://around-75015.appspot.com";
 
@@ -23,7 +25,7 @@ static NSString * const SCBaseURLString = @"https://around-75015.appspot.com";
     NSString *urlString = [SCBaseURLString stringByAppendingString:@"/post"];
     
     NSString *userName = [SCUserManager sharedUserManager].currentUser.userName;
-    CLLocation *currentLocation = [[CLLocation alloc] initWithLatitude:37.441883 longitude:-122.143019];
+    CLLocation *currentLocation = [[SCLocationManager sharedManager] getUserCurrentLocation];
     NSMutableDictionary *body = [@{@"user" : userName,
                                    @"message" : message,
                                    @"lat" : @(currentLocation.coordinate.latitude),

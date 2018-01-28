@@ -13,6 +13,7 @@
 #import "SCSignInViewController.h"
 #import "SCCreatePostViewController.h"
 #import "SCPostManager.h"
+#import "SCLocationManager.h"
 
 static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
 
@@ -33,6 +34,9 @@ static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
     [self loadPosts];
     // load UI
     [self setupUI];
+    //Location service notification
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadPosts) name:SCLocationUpdateNotification object:nil];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -79,7 +83,7 @@ static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
 - (void)loadPosts
 {
     __weak typeof(self) weakSelf = self;
-    CLLocation *location = [[CLLocation alloc] initWithLatitude:37.441883 longitude:-122.143019];
+    CLLocation *location = [[SCLocationManager sharedManager] getUserCurrentLocation];
     NSInteger range = 300000;
     [SCPostManager getPostsWithLocation:location range:range andCompletion:^(NSArray<SCPost *> *posts, NSError *error) {
         if (posts) {
