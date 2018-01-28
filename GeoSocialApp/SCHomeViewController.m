@@ -22,6 +22,7 @@ static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray<SCPost *> *posts;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
+@property (assign, nonatomic) BOOL resultMode;
 
 @end
 
@@ -30,6 +31,12 @@ static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // show post list for SCExploreViewController
+    if (self.resultMode) {
+        [self setupTableView];
+        return;
+    }
     // load data
     [self loadPosts];
     // load UI
@@ -82,6 +89,9 @@ static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
 #pragma mark - API
 - (void)loadPosts
 {
+    if (self.resultMode) {
+        return;
+    }
     __weak typeof(self) weakSelf = self;
     CLLocation *location = [[SCLocationManager sharedManager] getUserCurrentLocation];
     NSInteger range = 300000;
@@ -142,6 +152,7 @@ static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
 - (void)loadResultPageWithPosts:(NSArray <SCPost *>*)posts
 {
     self.posts = posts;
+    self.resultMode = YES;
     [self.tableView reloadData];
 }
 
