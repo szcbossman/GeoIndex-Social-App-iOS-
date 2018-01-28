@@ -13,6 +13,8 @@
 		E14FAA60200AD34C00C5F931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E14FAA5F200AD34C00C5F931 /* Assets.xcassets */; };
 		E14FAA63200AD34C00C5F931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14FAA61200AD34C00C5F931 /* LaunchScreen.storyboard */; };
 		E14FAA6D200AD48A00C5F931 /* SCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14FAA6C200AD48A00C5F931 /* SCTabBarController.m */; };
+		E177BA6F201E6A19007C88E5 /* SCExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E177BA6D201E6A19007C88E5 /* SCExploreViewController.m */; };
+		E177BA70201E6A19007C88E5 /* SCExploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E177BA6E201E6A19007C88E5 /* SCExploreViewController.xib */; };
 		E1CAFF47200C209B00F230E9 /* SCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CAFF45200C209B00F230E9 /* SCHomeViewController.m */; };
 		E1CAFF48200C209B00F230E9 /* SCHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1CAFF46200C209B00F230E9 /* SCHomeViewController.xib */; };
 		E1CAFF4C200C251F00F230E9 /* SCPost.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CAFF4B200C251F00F230E9 /* SCPost.m */; };
@@ -41,6 +43,9 @@
 		E14FAA64200AD34C00C5F931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E14FAA6B200AD48A00C5F931 /* SCTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTabBarController.h; sourceTree = "<group>"; };
 		E14FAA6C200AD48A00C5F931 /* SCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTabBarController.m; sourceTree = "<group>"; };
+		E177BA6C201E6A19007C88E5 /* SCExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCExploreViewController.h; sourceTree = "<group>"; };
+		E177BA6D201E6A19007C88E5 /* SCExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCExploreViewController.m; sourceTree = "<group>"; };
+		E177BA6E201E6A19007C88E5 /* SCExploreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCExploreViewController.xib; sourceTree = "<group>"; };
 		E1CAFF44200C209B00F230E9 /* SCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCHomeViewController.h; sourceTree = "<group>"; };
 		E1CAFF45200C209B00F230E9 /* SCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCHomeViewController.m; sourceTree = "<group>"; };
 		E1CAFF46200C209B00F230E9 /* SCHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCHomeViewController.xib; sourceTree = "<group>"; };
@@ -142,6 +147,9 @@
 				E1E818ED201555AA00D9B15E /* SCCreatePostViewController.h */,
 				E1E818EE201555AA00D9B15E /* SCCreatePostViewController.m */,
 				E1E818EF201555AA00D9B15E /* SCCreatePostViewController.xib */,
+				E177BA6C201E6A19007C88E5 /* SCExploreViewController.h */,
+				E177BA6D201E6A19007C88E5 /* SCExploreViewController.m */,
+				E177BA6E201E6A19007C88E5 /* SCExploreViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -254,6 +262,7 @@
 				E1CAFF48200C209B00F230E9 /* SCHomeViewController.xib in Resources */,
 				E14FAA63200AD34C00C5F931 /* LaunchScreen.storyboard in Resources */,
 				E1CAFF52200C258E00F230E9 /* SCHomeTableViewCell.xib in Resources */,
+				E177BA70201E6A19007C88E5 /* SCExploreViewController.xib in Resources */,
 				E14FAA60200AD34C00C5F931 /* Assets.xcassets in Resources */,
 				E1E818F1201555AA00D9B15E /* SCCreatePostViewController.xib in Resources */,
 				E1E818E920140B5C00D9B15E /* SCSignInViewController.xib in Resources */,
@@ -326,6 +335,7 @@
 				E1E818E4201406C200D9B15E /* SCUserManager.m in Sources */,
 				E14FAA55200AD34C00C5F931 /* main.m in Sources */,
 				E1E818EC20154B8700D9B15E /* SCPostManager.m in Sources */,
+				E177BA6F201E6A19007C88E5 /* SCExploreViewController.m in Sources */,
 				E1CAFF47200C209B00F230E9 /* SCHomeViewController.m in Sources */,
 				E1E818E02014053200D9B15E /* SCUser.m in Sources */,
 				E1CAFF51200C258E00F230E9 /* SCHomeTableViewCell.m in Sources */,
