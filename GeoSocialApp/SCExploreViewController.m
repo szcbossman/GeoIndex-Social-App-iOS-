@@ -12,6 +12,7 @@
 #import "SCPostManager.h"
 #import "SCPost.h"
 #import "SCHomeViewController.h"
+#import "SCPostDetailViewController.h"
 
 static NSString * const SCAnnotationIdentifier = @"post.pin";
 
@@ -123,7 +124,10 @@ static NSString * const SCAnnotationIdentifier = @"post.pin";
 {
     NSArray<SCPost *> *posts =[self postInLocation:coordinate];
     if (posts.count == 1) {
-        
+        SCPostDetailViewController *detailViewController = [[SCPostDetailViewController alloc] initWithNibName:NSStringFromClass([SCPostDetailViewController class]) bundle:nil];
+        [detailViewController loadDetailViewWithPost:posts.firstObject];
+        [self.navigationController pushViewController:detailViewController animated:YES];
+
     }
     else if (posts.count > 1) {
         SCHomeViewController *postsViewController = [[SCHomeViewController alloc] initWithNibName:NSStringFromClass([SCHomeViewController class]) bundle:nil];

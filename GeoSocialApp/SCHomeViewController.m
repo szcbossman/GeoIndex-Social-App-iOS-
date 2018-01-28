@@ -14,6 +14,7 @@
 #import "SCCreatePostViewController.h"
 #import "SCPostManager.h"
 #import "SCLocationManager.h"
+#import "SCPostDetailViewController.h"
 
 static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
 
@@ -74,6 +75,15 @@ static NSString * const SCHomeCellIdentifier = @"homeCellIdentifier";
     return [SCHomeTableViewCell cellHeight];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.posts.count > indexPath.row) {
+        SCPost *post =[self.posts objectAtIndex:indexPath.row];
+        SCPostDetailViewController *detailViewController = [[SCPostDetailViewController alloc] initWithNibName:NSStringFromClass([SCPostDetailViewController class]) bundle:nil];
+        [detailViewController loadDetailViewWithPost:post];
+        [self.navigationController pushViewController:detailViewController animated:YES];
+    }
+}
 
 #pragma mark - SCSignInViewControllerDelegate
 - (void)loginSuccess {

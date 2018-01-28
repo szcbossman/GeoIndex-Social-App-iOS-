@@ -25,7 +25,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </mapView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odw-Xl-7rN">
-                    <rect key="frame" x="87" y="577" width="200" height="40"/>
+                    <rect key="frame" x="87" y="557" width="200" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="RQI-ok-uUp"/>
                         <constraint firstAttribute="height" constant="40" id="tSl-jc-PXg"/>
@@ -38,7 +38,7 @@
                 <constraint firstAttribute="trailing" secondItem="LLT-pD-Jba" secondAttribute="trailing" id="24b-Bh-OkT"/>
                 <constraint firstItem="odw-Xl-7rN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9lI-75-wp1"/>
                 <constraint firstItem="LLT-pD-Jba" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ck7-5q-T9a"/>
-                <constraint firstAttribute="bottom" secondItem="odw-Xl-7rN" secondAttribute="bottom" constant="50" id="I4g-I8-tIX"/>
+                <constraint firstAttribute="bottom" secondItem="odw-Xl-7rN" secondAttribute="bottom" constant="70" id="I4g-I8-tIX"/>
                 <constraint firstAttribute="bottom" secondItem="LLT-pD-Jba" secondAttribute="bottom" id="cJv-36-fw6"/>
                 <constraint firstItem="LLT-pD-Jba" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="m0i-lt-pXK"/>
             </constraints>

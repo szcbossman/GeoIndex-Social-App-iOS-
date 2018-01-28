@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8D784B796AD5D781FBB20F56 /* libPods-GeoSocialApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0F62FE94D7AF8627CC13D0 /* libPods-GeoSocialApp.a */; };
+		E1201B37201E883B00F184AA /* SCPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1201B35201E883B00F184AA /* SCPostDetailViewController.m */; };
+		E1201B38201E883B00F184AA /* SCPostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1201B36201E883B00F184AA /* SCPostDetailViewController.xib */; };
 		E14FAA55200AD34C00C5F931 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E14FAA54200AD34C00C5F931 /* main.m */; };
 		E14FAA58200AD34C00C5F931 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E14FAA57200AD34C00C5F931 /* AppDelegate.m */; };
 		E14FAA60200AD34C00C5F931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E14FAA5F200AD34C00C5F931 /* Assets.xcassets */; };
@@ -34,6 +36,9 @@
 		15F1C91A0B737E385E3DF372 /* Pods-GeoSocialApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoSocialApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoSocialApp/Pods-GeoSocialApp.release.xcconfig"; sourceTree = "<group>"; };
 		695B54F23B045346D55A9B24 /* Pods-GeoSocialApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoSocialApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoSocialApp/Pods-GeoSocialApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8C0F62FE94D7AF8627CC13D0 /* libPods-GeoSocialApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GeoSocialApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1201B34201E883B00F184AA /* SCPostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPostDetailViewController.h; sourceTree = "<group>"; };
+		E1201B35201E883B00F184AA /* SCPostDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPostDetailViewController.m; sourceTree = "<group>"; };
+		E1201B36201E883B00F184AA /* SCPostDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCPostDetailViewController.xib; sourceTree = "<group>"; };
 		E14FAA50200AD34C00C5F931 /* GeoSocialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoSocialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14FAA54200AD34C00C5F931 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E14FAA56200AD34C00C5F931 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -150,6 +155,9 @@
 				E177BA6C201E6A19007C88E5 /* SCExploreViewController.h */,
 				E177BA6D201E6A19007C88E5 /* SCExploreViewController.m */,
 				E177BA6E201E6A19007C88E5 /* SCExploreViewController.xib */,
+				E1201B34201E883B00F184AA /* SCPostDetailViewController.h */,
+				E1201B35201E883B00F184AA /* SCPostDetailViewController.m */,
+				E1201B36201E883B00F184AA /* SCPostDetailViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -264,6 +272,7 @@
 				E1CAFF52200C258E00F230E9 /* SCHomeTableViewCell.xib in Resources */,
 				E177BA70201E6A19007C88E5 /* SCExploreViewController.xib in Resources */,
 				E14FAA60200AD34C00C5F931 /* Assets.xcassets in Resources */,
+				E1201B38201E883B00F184AA /* SCPostDetailViewController.xib in Resources */,
 				E1E818F1201555AA00D9B15E /* SCCreatePostViewController.xib in Resources */,
 				E1E818E920140B5C00D9B15E /* SCSignInViewController.xib in Resources */,
 			);
@@ -340,6 +349,7 @@
 				E1E818E02014053200D9B15E /* SCUser.m in Sources */,
 				E1CAFF51200C258E00F230E9 /* SCHomeTableViewCell.m in Sources */,
 				E1CAFF4C200C251F00F230E9 /* SCPost.m in Sources */,
+				E1201B37201E883B00F184AA /* SCPostDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
