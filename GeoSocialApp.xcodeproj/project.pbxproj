@@ -10,6 +10,7 @@
 		8D784B796AD5D781FBB20F56 /* libPods-GeoSocialApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0F62FE94D7AF8627CC13D0 /* libPods-GeoSocialApp.a */; };
 		E1201B37201E883B00F184AA /* SCPostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1201B35201E883B00F184AA /* SCPostDetailViewController.m */; };
 		E1201B38201E883B00F184AA /* SCPostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1201B36201E883B00F184AA /* SCPostDetailViewController.xib */; };
+		E1201B3C201E9DA800F184AA /* UIColor+colorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E1201B3B201E9DA800F184AA /* UIColor+colorExtension.m */; };
 		E14FAA55200AD34C00C5F931 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E14FAA54200AD34C00C5F931 /* main.m */; };
 		E14FAA58200AD34C00C5F931 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E14FAA57200AD34C00C5F931 /* AppDelegate.m */; };
 		E14FAA60200AD34C00C5F931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E14FAA5F200AD34C00C5F931 /* Assets.xcassets */; };
@@ -39,6 +40,8 @@
 		E1201B34201E883B00F184AA /* SCPostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPostDetailViewController.h; sourceTree = "<group>"; };
 		E1201B35201E883B00F184AA /* SCPostDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPostDetailViewController.m; sourceTree = "<group>"; };
 		E1201B36201E883B00F184AA /* SCPostDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCPostDetailViewController.xib; sourceTree = "<group>"; };
+		E1201B3A201E9DA800F184AA /* UIColor+colorExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+colorExtension.h"; sourceTree = "<group>"; };
+		E1201B3B201E9DA800F184AA /* UIColor+colorExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+colorExtension.m"; sourceTree = "<group>"; };
 		E14FAA50200AD34C00C5F931 /* GeoSocialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoSocialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14FAA54200AD34C00C5F931 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E14FAA56200AD34C00C5F931 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +98,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E1201B39201E9D6100F184AA /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E1201B3A201E9DA800F184AA /* UIColor+colorExtension.h */,
+				E1201B3B201E9DA800F184AA /* UIColor+colorExtension.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		E14FAA47200AD34C00C5F931 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +128,7 @@
 		E14FAA52200AD34C00C5F931 /* GeoSocialApp */ = {
 			isa = PBXGroup;
 			children = (
+				E1201B39201E9D6100F184AA /* Util */,
 				E14FAA56200AD34C00C5F931 /* AppDelegate.h */,
 				E14FAA57200AD34C00C5F931 /* AppDelegate.m */,
 				E1E818E12014068900D9B15E /* Manager */,
@@ -343,6 +356,7 @@
 				E1FB9814201D308E00BDBEA4 /* SCLocationManager.m in Sources */,
 				E1E818E4201406C200D9B15E /* SCUserManager.m in Sources */,
 				E14FAA55200AD34C00C5F931 /* main.m in Sources */,
+				E1201B3C201E9DA800F184AA /* UIColor+colorExtension.m in Sources */,
 				E1E818EC20154B8700D9B15E /* SCPostManager.m in Sources */,
 				E177BA6F201E6A19007C88E5 /* SCExploreViewController.m in Sources */,
 				E1CAFF47200C209B00F230E9 /* SCHomeViewController.m in Sources */,

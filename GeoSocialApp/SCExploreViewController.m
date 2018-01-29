@@ -13,6 +13,7 @@
 #import "SCPost.h"
 #import "SCHomeViewController.h"
 #import "SCPostDetailViewController.h"
+#import "UIColor+colorExtension.h"
 
 static NSString * const SCAnnotationIdentifier = @"post.pin";
 
@@ -43,7 +44,7 @@ static NSString * const SCAnnotationIdentifier = @"post.pin";
     self.title = NSLocalizedString(@"Explore", nil);
     [self.reloadButton setTitle:NSLocalizedString(@"Search This Area", nil) forState:UIControlStateNormal];
     [self.reloadButton addTarget:self action:@selector(reloadPosts) forControlEvents:UIControlEventTouchUpInside];
-    self.reloadButton.backgroundColor = [UIColor colorWithRed:83.0 / 255.0 green:200.0 / 255.0 blue:118.0 / 255.0 alpha:1.0];
+    self.reloadButton.backgroundColor = [UIColor SCColor];
     [self.reloadButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.reloadButton.layer.cornerRadius = 5;
     [self setupMap];

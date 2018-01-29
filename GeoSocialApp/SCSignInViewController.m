@@ -9,6 +9,7 @@
 #import "SCSignInViewController.h"
 #import "SCUser.h"
 #import "SCUserManager.h"
+#import "UIColor+colorExtension.h"
 
 @interface SCSignInViewController () <UITextFieldDelegate>
 
@@ -34,7 +35,7 @@
     [self.signInButton addTarget:self action:@selector(userLogin) forControlEvents:UIControlEventTouchUpInside];
     self.signInButton.layer.contentsScale = 5;
     [self.signInButton setTitle:@"Sign in" forState:UIControlStateNormal];
-    self.signInButton.backgroundColor = [UIColor colorWithRed:83.0 / 255.0 green:200.0 / 255.0 blue:118.0 / 255.0 alpha:1.0];
+    self.signInButton.backgroundColor = [UIColor SCColor];
     [self.signInButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.nameField.delegate = self;
     self.passwordField.delegate = self;
@@ -42,7 +43,7 @@
     [self.signupButton addTarget:self action:@selector(userSignup) forControlEvents:UIControlEventTouchUpInside];
     self.signupButton.layer.contentsScale = 5;
     [self.signupButton setTitle:@"Sign up" forState:UIControlStateNormal];
-    self.signupButton.backgroundColor = [UIColor colorWithRed:83.0 / 255.0 green:200.0 / 255.0 blue:118.0 / 255.0 alpha:1.0];
+    self.signupButton.backgroundColor = [UIColor SCColor];
     [self.signupButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }
 

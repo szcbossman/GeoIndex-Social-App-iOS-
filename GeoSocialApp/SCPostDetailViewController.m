@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *postView;
 @property (strong, nonatomic) SCPost *post;
 
+
 @end
 
 @implementation SCPostDetailViewController
@@ -32,18 +33,15 @@
 
 - (void)setupUI
 {
-    self.title = NSLocalizedString(@"Detail", nil);
+    self.title = NSLocalizedString(@"Detail", nil); //(Localization Optimize)
     self.postImageView.layer.masksToBounds = YES;
     self.postImageView.layer.cornerRadius = 5.0;
+    
 }
 
 - (void) loadDetailViewWithPost:(SCPost *)post {
     self.post = post;
 }
-
-
-
-
 
 
 
